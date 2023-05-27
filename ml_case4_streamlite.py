@@ -43,9 +43,9 @@ def predict(Present_Price, Kms_Driven, Owner, YearofMake, Fuel_Type, Seller_Type
     return prediction
 
 
-st.title('Heart Disease Classification: 0 No disease, 1 heart disease')
+st.title('Second Hand Car Sales Price Prediction')
 st.image("""https://images.livemint.com/img/2020/09/16/1600x900/carsales-koVB--621x414@LiveMint_1600277936612.jpg""")
-st.header('Enter the characteristics of the Heart:')
+st.header('Enter the Information of the Car:')
 Present_Price = st.number_input('Present_Price:', min_value=10000, max_value=10000000, value=10000)
 Kms_Driven = st.number_input('Kms_Driven:', min_value=0, max_value=10000000, value=10000)
 Owner = st.number_input('Owner:', min_value=0, max_value=3, value=1)
