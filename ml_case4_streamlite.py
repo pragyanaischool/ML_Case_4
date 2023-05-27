@@ -21,7 +21,7 @@ regressor = SVR(kernel = 'rbf')
 #Loading up the Regression model we created
 #regressor=RandomForestRegressor(n_estimators =1100,min_samples_split=2,min_samples_leaf=2,max_features='log2',max_depth=20,criterion ='friedman_mse')
 
-regressor = joblib.load('svm_model.joblib')
+model = joblib.load('svm_model.joblib')
 #Caching the model for faster loading
 @st.cache
 
@@ -44,7 +44,7 @@ def predict(Present_Price, Kms_Driven, Owner, YearofMake, Fuel_Type, Seller_Type
         Transmission_Manual = 2
     no_year = 2021 - YearofMake
     df = pd.DataFrame([[Present_Price, Kms_Driven, Owner, no_year, Fuel_Type_Diesel, Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Manual]], columns=['Present_Price', 'Kms_Driven', 'Owner', 'YearofMake','Fuel_Type_Diesel', 'Fuel_Type_Petrol', 'Transmission_Manual'])
-    prediction = regressor.predict(df)
+    prediction = model.predict(df)
     return prediction
 
 
