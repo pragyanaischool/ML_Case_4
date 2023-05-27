@@ -39,7 +39,7 @@ def predict(Present_Price, Kms_Driven, Owner, YearofMake, Fuel_Type, Seller_Type
         Transmission_Manual = 2
     no_year = 2021 - YearofMake
     df = pd.DataFrame([[Present_Price, Kms_Driven, Owner, no_year, Fuel_Type_Diesel, Fuel_Type_Petrol, Seller_Type_Individual, Transmission_Manual]], columns=['Present_Price', 'Kms_Driven', 'Owner', 'YearofMake','Fuel_Type_Diesel', 'Fuel_Type_Petrol', 'Transmission_Manual'])
-    prediction = model.predict(x_test)
+    prediction = model.predict(df)
     return prediction
 
 
