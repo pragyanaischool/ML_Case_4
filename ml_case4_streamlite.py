@@ -11,11 +11,11 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-from sklearn.ensemble import RandomForestRegressor
+#from sklearn.ensemble import RandomForestRegressor
 
 
 #Loading up the Regression model we created
-regressor=RandomForestRegressor(n_estimators =1100,min_samples_split=2,min_samples_leaf=2,max_features='log2',max_depth=20,criterion ='friedman_mse')
+#regressor=RandomForestRegressor(n_estimators =1100,min_samples_split=2,min_samples_leaf=2,max_features='log2',max_depth=20,criterion ='friedman_mse')
 
 model = joblib.load('rf_random_new.joblib')
 #Caching the model for faster loading
