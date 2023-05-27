@@ -17,7 +17,7 @@ from sklearn.ensemble import RandomForestRegressor
 #Loading up the Regression model we created
 regressor=RandomForestRegressor()
 
-model = joblib.load('rf_random.joblib')
+model = joblib.load('rf_random_new.joblib')
 #Caching the model for faster loading
 @st.cache
 
