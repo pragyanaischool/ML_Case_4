@@ -21,7 +21,7 @@ regressor = SVR(kernel = 'rbf')
 #Loading up the Regression model we created
 #regressor=RandomForestRegressor(n_estimators =1100,min_samples_split=2,min_samples_leaf=2,max_features='log2',max_depth=20,criterion ='friedman_mse')
 
-regressor = joblib.load('car_model.joblib')
+regressor = joblib.load('svm_model.joblib')
 #Caching the model for faster loading
 @st.cache
 
