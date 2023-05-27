@@ -44,7 +44,7 @@ def predict(Present_Price, Kms_Driven, Owner, YearofMake, Fuel_Type, Seller_Type
 
 
 st.title('Heart Disease Classification: 0 No disease, 1 heart disease')
-st.image("""https://familydoctor.org/wp-content/uploads/2000/09/42187220_l.jpg""")
+st.image("""https://images.livemint.com/img/2020/09/16/1600x900/carsales-koVB--621x414@LiveMint_1600277936612.jpg""")
 st.header('Enter the characteristics of the Heart:')
 Present_Price = st.number_input('Present_Price:', min_value=10000, max_value=10000000, value=10000)
 Kms_Driven = st.number_input('Kms_Driven:', min_value=0, max_value=10000000, value=10000)
