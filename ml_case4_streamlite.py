@@ -15,13 +15,14 @@ import joblib
 from sklearn.svm import SVR
 regressor = SVR(kernel = 'rbf')
 
-#from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor
 
 
 #Loading up the Regression model we created
 #regressor=RandomForestRegressor(n_estimators =1100,min_samples_split=2,min_samples_leaf=2,max_features='log2',max_depth=20,criterion ='friedman_mse')
 
-model = joblib.load('svr_model.joblib')
+#model = joblib.load('svr_model.joblib')
+model = joblib.load('rf_random_new.joblib')
 #Caching the model for faster loading
 @st.cache
 
